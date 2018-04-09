@@ -1,4 +1,4 @@
-# collectd-solr
+# Collectd Solr Plugin
 Collectd Plugin for Solr monitoring (tested with Solr 6.6)
 
 # Installation
