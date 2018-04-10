@@ -1,13 +1,19 @@
-# Collectd Solr Plugin
-Collectd Plugin for Solr monitoring (tested with Solr 6.6)
+Collectd Solr Plugin
+=========
 [![Build Status](https://api.travis-ci.org/skarj/collectd-plugin-solr.svg?branch=master)](https://travis-ci.org/skarj/collectd-plugin-solr)
 
-# Installation
-1. Copy solr.py script to /usr/lib/collectd/modules/
-2. Add collectd plugin configuration
-3. Restart collectd
+Collectd Plugin for Solr monitoring (tested with Solr 6.6)
 
-# Collectd configuration
+Installation
+------------
+
+* Copy solr.py script to /usr/lib/collectd/modules/
+* Add collectd plugin configuration
+* Restart collectd
+
+Collectd configuration
+------------
+
 ```
 LoadPlugin python
 <Plugin python>
