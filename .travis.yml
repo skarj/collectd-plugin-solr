@@ -1,0 +1,21 @@
+---
+
+language: python
+
+python:
+  - "2.7"
+
+before_install:
+  - echo "deb http://pkg.ci.collectd.org/deb trusty collectd-5.7" | sudo tee -a /etc/apt/sources.list
+  - sudo apt-get -qq update
+  - sudo apt-get install collectd collectd-utils -y --allow-unauthenticated
+#  - mkdir ../solr && pushd ../solr
+#  - wget http://archive.apache.org/dist/lucene/solr/6.6.3/solr-6.6.3.tgz
+#  - tar xzf solr-6.6.3.tgz && ./solr-6.6.3/bin/solr -c -e schemaless
+
+install:
+  - sudo mkdir /usr/lib/collectd/modules/
+  - sudo cp solr.py /usr/lib/collectd/modules/
+
+script:
+  - collectd -t -T -C test/collectd.conf
